@@ -1,5 +1,7 @@
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 
 const Header = () => {
   return (
@@ -29,8 +31,11 @@ const Header = () => {
           <span className="header__optionLine1">Your</span>
           <span className="header__optionLine2">Pro Subscription</span>
         </div>
+        <div className="header__optionBasket">
+            <AddShoppingCartIcon />
 
-        
+            <span className="header__optionLine2 header__basketCount">0</span>
+        </div>
       </div>
     </div>
   );
