@@ -29,6 +29,8 @@ const Header = () => {
           <span className="header__optionLine1">Your</span>
           <span className="header__optionLine2">Pro Subscription</span>
         </div>
+
+        
       </div>
     </div>
   );
