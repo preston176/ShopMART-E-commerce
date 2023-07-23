@@ -68,3 +68,8 @@
     align-items: center;
     color: #fff;
 }
+
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
+}
