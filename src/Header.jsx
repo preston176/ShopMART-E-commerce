@@ -14,9 +14,30 @@ const Header = () => {
       </div>
 
         <div className="header__nav">
-            <div className="header__option"></div>
-            <div className="header__option"></div>
-            <div className="header__option"></div>
+            <div className="header__option">
+                <span className='header__optionLine1'>
+                    Hello User
+                </span>
+                <span className='header__optionLine2'>
+                    Log in
+                </span>
+            </div>
+            <div className="header__option">
+            <span className='header__optionLine1'>
+                    Requset returns
+                </span>
+                <span className='header__optionLine2'>
+                    & Orders
+                </span>
+            </div>
+            <div className="header__option">
+            <span className='header__optionLine1'>
+                    Your
+                </span>
+                <span className='header__optionLine2'>
+                    Pro Subscription
+                </span>
+            </div>
         </div>
     </div>
   )
