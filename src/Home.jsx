@@ -9,6 +9,23 @@ const Home = () => {
             src="./images/banner.jpg"
             alt="home-image"
         />
+        <div className="home__row">
+            {/* product */}
+            {/* product */}
+        </div>
+        <div className="home__row">
+            {/* product */}
+            {/* product */}
+            {/* product */}
+        </div>
+        <div className="home__row">
+            {/* product */}
+             {/* product */}
+              {/* product */}
+            </div>
+            <div className="home__row">
+            {/* product */}
+            </div>
     </div>
     </div>
   )
