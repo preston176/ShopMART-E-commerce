@@ -18,10 +18,11 @@ const Subtotal = () => {
     )}
       decimalScale={2}
       value={0}
-      displayType={"Text"}
+    //   displayType={"Text"}
       thousandSeparator={true}
       prefix={"$"}
       />
+      <button>Proceed to Checkout</button>
     </div>
   )
 }
