@@ -1,6 +1,7 @@
 import "./header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -34,11 +35,13 @@ const Header = () => {
           <span className="header__optionLine1">Your</span>
           <span className="header__optionLine2">Pro Subscription</span>
         </div>
+        <Link to='/checkout'>
         <div className="header__optionBasket">
             <AddShoppingCartIcon />
 
             <span className="header__optionLine2 header__basketCount">0</span>
         </div>
+        </Link>
       </div>
     </div>
   );
