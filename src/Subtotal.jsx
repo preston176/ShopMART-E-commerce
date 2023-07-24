@@ -2,7 +2,7 @@ import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 import "./subtotal.css";
 import { FormattedNumber } from "react-intl";
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Subtotal = () => {
