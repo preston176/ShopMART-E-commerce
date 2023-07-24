@@ -12,14 +12,14 @@ const Home = () => {
         />
         <div className="home__row">
             <Product 
-                id="949141871"
+                id="1"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
                 rating={5}
             />
             <Product 
-                id="949141871"
+                id="2"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
@@ -28,21 +28,21 @@ const Home = () => {
         </div>
         <div className="home__row">
             <Product 
-            id="949141871"
+            id="10"
             title="iPhone 14 Pro Max"
             price={930.0}
             image="https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_SX679_.jpg"
             rating={4}
              />
              <Product 
-                id="949141871"
+                id="3"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
                 rating={5}
             />
             <Product 
-                id="949141871"
+                id="4"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
@@ -51,21 +51,21 @@ const Home = () => {
         </div>
         <div className="home__row">
         <Product 
-                id="949141871"
+                id="5"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
                 rating={5}
             />
              <Product 
-                id="949141871"
+                id="6"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
                 rating={5}
             />
             <Product 
-                id="949141871"
+                id="7"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
@@ -74,7 +74,7 @@ const Home = () => {
             </div>
             <div className="home__row">
             <Product 
-                id="949141871"
+                id="8"
                 title='The intro to C++' 
                 price={29.99}
                 image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"

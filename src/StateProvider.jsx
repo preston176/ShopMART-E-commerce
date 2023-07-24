@@ -12,4 +12,4 @@ export const StateProvider = ({ reducer, initialState, children}) => (
 
 // get info from dataLayer
 
-export const useState = () => useContext(StateContext);
+export const useStateValue = () => useContext(StateContext);
