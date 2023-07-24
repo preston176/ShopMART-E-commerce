@@ -6,7 +6,7 @@ const Subtotal = () => {
     <div className='subtotal'>
     <CurrencyFormat
     renderText={(value) => (
-        <>
+        <div>
         <p>
             Subtotal (0 items):
             <strong>{0}</strong>
@@ -14,7 +14,7 @@ const Subtotal = () => {
             <small className="subtotal__gift">
                 <input type="checkbox" /> This order contains a gift
             </small>
-        </>
+        </div>
     )}
       decimalScale={2}
       value={0}
