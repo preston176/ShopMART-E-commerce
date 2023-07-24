@@ -11,10 +11,6 @@ const Product = () => {
         </p>
         <div className='product__rating'>
             <p>⭐</p>
-            <p>⭐</p>
-            <p>⭐</p>
-            <p>⭐</p>
-            <p>⭐</p>
         </div>
     
       </div>
