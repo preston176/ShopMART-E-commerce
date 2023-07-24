@@ -1,7 +1,7 @@
 // Import Firebase SDK and specific modules
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-import { getAuth, createUserWithEmailAndPassword  } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCf4MNT60BFlgF0MqmYLULaGbSD2HuBqi4",
@@ -19,4 +19,4 @@ const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp);
 
-export { db, auth, createUserWithEmailAndPassword  };
+export { db, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };

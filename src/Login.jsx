@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { useState } from 'react'
-import { auth, createUserWithEmailAndPassword  } from './firebase'
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './firebase'
 
 
 
@@ -13,10 +13,15 @@ const Login = () => {
 
     const signIn = (e) => {
         e.preventDefault();
-
-        //use firebase login
-
-    }
+        // Use firebase login here
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // On successful login
+            console.log(userCredential.user);
+            navigate('/'); // Navigate to the desired route on successful login
+          })
+          .catch((error) => alert(error.message));
+      };
 const register = (e) => {
     e.preventDefault()
     // firebase registration happens here
