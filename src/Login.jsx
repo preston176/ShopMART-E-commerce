@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { useState } from 'react'
+import { auth, createUserWithEmailAndPassword  } from './firebase'
 
 
 
 const Login = () => {
+    const navigate = useNavigate()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -18,6 +20,15 @@ const Login = () => {
 const register = (e) => {
     e.preventDefault()
     // firebase registration happens here
+    createUserWithEmailAndPassword(auth, email, password) // Use the imported method here
+    .then((userCredential) => {
+      // On success creation
+      console.log(userCredential.user);
+      if (auth) {
+        navigate('/'); //force redirect
+      }
+    })
+    .catch((error) => alert(error.message));
 }
 
   return (
