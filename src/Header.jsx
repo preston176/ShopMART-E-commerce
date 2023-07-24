@@ -26,12 +26,12 @@ const Header = () => {
       </div>
 
       <div className="header__nav">
+      <Link to='/login'>
         <div className="header__option">
           <span className="header__optionLine1">Hello User</span>
-          <Link to='/login'>
           <span className="header__optionLine2">Log in</span>
-          </Link>
         </div>
+        </Link>
         <div className="header__option">
           <span className="header__optionLine1">Requset returns</span>
           <span className="header__optionLine2">& Orders</span>
