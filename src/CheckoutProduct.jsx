@@ -27,7 +27,7 @@ const CheckoutProduct = ({id, image, title, price, rating }) => {
         </p>
         <div className="checkoutPrice__rating">
         {Array(rating).fill().map((_, i) => (
-          <p key={id}>⭐</p>
+          <p key={crypto.randomUUID()}>⭐</p>
         ))}
         </div>
         <button onClick={removeFromBasket}>Remove from Cart</button>
