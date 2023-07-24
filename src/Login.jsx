@@ -2,9 +2,23 @@ import { Link } from 'react-router-dom'
 import './Login.css'
 import { useState } from 'react'
 
+
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+
+    const signIn = (e) => {
+        e.preventDefault();
+
+        //use firebase login
+
+    }
+const register = (e) => {
+    e.preventDefault()
+    // firebase registration happens here
+}
 
   return (
     <div className="login">
@@ -23,12 +37,16 @@ const Login = () => {
                 <h5>Password</h5>
                 <input type="password" value={password} onChange={e => {setPassword(e.target.value)}}/>
 
-                <button className='login__signInButton'>Log In</button>
+                <button 
+                onClick={signIn}
+                type='submit'
+                className='login__signInButton'>Log In</button>
             </form>
             <p>
                 By logging-in you agree to our T&C of use 7 Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice
             </p>
-            <button className='login__registerButton'>Create your account</button>
+            <button onClick={register}
+            className='login__registerButton'>Create your account</button>
       </div>
     </div>
   )
