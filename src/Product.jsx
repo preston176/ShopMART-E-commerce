@@ -1,6 +1,6 @@
 import './product.css'
 
-const Product = ({ title, image, price, rating }) => {
+const Product = ({ title, image, price, rating, id }) => {
   return (
     <div className='product'>
       <div className='product__info'>
@@ -11,7 +11,9 @@ const Product = ({ title, image, price, rating }) => {
         </p>
         <div className='product__rating'>
      {Array(rating).fill().map((_, i) => (
-            <p>⭐</p>
+            <p
+            key={id}
+            >⭐</p>
             ))}
             
         </div>
