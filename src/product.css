@@ -1,6 +1,8 @@
 .product {
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .product > img {
