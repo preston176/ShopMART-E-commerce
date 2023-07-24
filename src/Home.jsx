@@ -11,7 +11,11 @@ const Home = () => {
             alt="home-image"
         />
         <div className="home__row">
-            <Product />
+            <Product title='The intro to C++' 
+                price={29.99}
+                image="https://bytehide.com/blog/wp-content/uploads/2022/06/5601.png"
+                rating={5}
+            />
             <Product />
             {/* product */}
         </div>
