@@ -6,12 +6,15 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 const Header = () => {
   return (
     <div className="header">
-      <img
+        <Link to='/'>
+        <img
         className="header__logo"
         src="https://thumbs.dreamstime.com/b/lets-shopping-logo-design-template-cart-icon-designs-134743663.jpg"
         alt="store-logo"
       />
-
+        </Link>
+      
+  
       <div className="header__search">
         <input className="header__searchInput" type="text" />
         <SearchIcon className="header__searchIcon"
