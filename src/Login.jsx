@@ -2,13 +2,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { useState } from 'react'
 import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './firebase'
-
+import { useAuthState } from 'react-firebase-hooks/auth'; 
 
 
 const Login = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [user] = useAuthState(auth); 
 
 
     const signIn = (e) => {
@@ -38,9 +39,16 @@ const register = (e) => {
 
   return (
     <div className="login">
-    <Link to='/'>
-      <img className='login__logo' src="/images/banner.jpg" alt="login-page" />
-      </Link>
+    {/* Conditionally render the Log-in link */}
+    {!user ? (
+        <Link to="/login">
+          <img className="login__logo" src="/images/banner.jpg" alt="login-page" />
+        </Link>
+      ) : (
+        <Link to="/">
+          <img className="login__logo" src="/images/banner.jpg" alt="login-page" />
+        </Link>
+      )}
 
       <div className="login__container">
         <h1>Log-in</h1>
