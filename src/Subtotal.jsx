@@ -21,9 +21,9 @@ const Subtotal = () => {
           </>
         )}
         decimalScale={2}
-        value={getBasketTotal(basket)} // Replace this with the actual subtotal value
+        value={getBasketTotal(basket)} //actual subtotal value
         displayType={"text"}
-        thousandSeparator={true}
+        thousandSeparator={true} // e.g 1,000
         prefix={"$"}
       />
       <button>Proceed to Checkout</button>
