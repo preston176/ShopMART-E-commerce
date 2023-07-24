@@ -1,6 +1,6 @@
 import './product.css'
 
-const Product = () => {
+const Product = ({ title, image, price, rating }) => {
   return (
     <div className='product'>
       <div className='product__info'>
