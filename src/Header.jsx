@@ -28,7 +28,9 @@ const Header = () => {
       <div className="header__nav">
         <div className="header__option">
           <span className="header__optionLine1">Hello User</span>
+          <Link to='/login'>
           <span className="header__optionLine2">Log in</span>
+          </Link>
         </div>
         <div className="header__option">
           <span className="header__optionLine1">Requset returns</span>
