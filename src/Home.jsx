@@ -1,3 +1,4 @@
+import Product from './Product'
 import './home.css'
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
             alt="home-image"
         />
         <div className="home__row">
-            {/* product */}
+            <Product />
             {/* product */}
         </div>
         <div className="home__row">
