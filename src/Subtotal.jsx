@@ -2,9 +2,11 @@ import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 import "./subtotal.css";
 import { FormattedNumber } from "react-intl";
+import {  useNavigate } from 'react-router-dom';
 
 
 const Subtotal = () => {
+  const navigate = useNavigate();
   const [{ basket }, dispatch] = useStateValue();
 
   const subtotalValue = getBasketTotal(basket);
@@ -24,7 +26,7 @@ const Subtotal = () => {
       <small className="subtotal__gift">
         <input type="checkbox" /> This order contains a gift
       </small>
-      <button>Proceed to Checkout</button>
+      <button onClick={e => navigate('/payment')}>Proceed to Checkout</button>
     </div>
   );
 };
