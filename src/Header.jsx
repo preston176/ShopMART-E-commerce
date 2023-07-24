@@ -43,7 +43,7 @@ const Header = () => {
             <AddShoppingCartIcon />
 
             <span className="header__optionLine2 header__basketCount">
-              {basket.length}
+              {basket?.length}
             </span>
         </div>
         </Link>
