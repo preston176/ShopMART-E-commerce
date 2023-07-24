@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
