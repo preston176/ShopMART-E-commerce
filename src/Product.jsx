@@ -1,9 +1,8 @@
 import { Button } from '@mui/material';
 import './product.css'
 import {useStateValue } from "./StateProvider"
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ToastNotification from './ToastNotification';
 
 const Product = ({ title, image, price, rating, id }) => {
 const [{basket}, dispatch] = useStateValue();
@@ -15,7 +14,7 @@ const [{basket}, dispatch] = useStateValue();
 
 const addToBasket = () => {
   // toast added
-  const toastInfo = () => toast.info('Added to Card successfully');
+  const toastInfo = () => toast.info('Added to Cart successfully');
 
         // dispatch some action into the data i.e item to data layer
     dispatch({

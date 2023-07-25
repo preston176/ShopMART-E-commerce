@@ -1,18 +1,22 @@
 import './CheckoutProduct.css'
 import { useStateValue } from './StateProvider'
-
+import { toast } from 'react-toastify';
 
 const CheckoutProduct = ({id, image, title, price, rating, hideButton }) => {
 
     const [{ basket }, dispatch ] = useStateValue();
 
     const removeFromBasket = () => {
+      //
+      const toastWarn = () => toast.warn('Removed from Cart');
         // to remove item from basket
             dispatch({
                 type: 'REMOVE_FROM_BASKET',
                 id: id,
             })
+            toastWarn()
     }
+
 
   return (
     <div className="checkoutProduct">

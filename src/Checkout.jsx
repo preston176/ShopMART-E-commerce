@@ -2,11 +2,23 @@ import Subtotal from './Subtotal';
 import './Checkout.css';
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
+import { ToastContainer } from 'react-toastify';
 
 const Checkout = () => {
   const [{basket, user}, dispatch] = useStateValue();
   return (
     <div className='checkout'>
+    <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        // pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="checkout__left">
         <img className='checkout__ad' src="images/banner.jpg" alt="checkout__ad" />
         <div>
