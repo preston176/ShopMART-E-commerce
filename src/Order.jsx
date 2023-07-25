@@ -15,7 +15,7 @@ const Order = ({ order }) => {
 
       {order.data.basket?.map((item) => (
         <CheckoutProduct
-          key={item.id}
+          key={crypto.randomUUID()}
           id={item.id}
           title={item.title}
           image={item.image}
