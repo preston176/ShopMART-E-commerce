@@ -22,6 +22,7 @@ const Home = ({ searchQuery }) => {
         </div>
         <div className="home__row">
           {filteredProducts.map((product) => (
+         
             <Product
               key={product.id}
               id={product.id}
@@ -30,8 +31,9 @@ const Home = ({ searchQuery }) => {
               image={product.image}
               rating={product.rating}
             />
+             
           ))}
-        </div>
+          </div>
       </div>
     </div>
   );
