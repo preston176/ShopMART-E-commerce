@@ -1,9 +1,16 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef, useState } from 'react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import Product from './Product'
 import './home.css'
 import { products } from './producsData';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 
 const Home = ({ searchQuery }) => {
-   
+
 
       const filteredProducts = products.filter(
         (product) =>
@@ -13,11 +20,26 @@ const Home = ({ searchQuery }) => {
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="./images/banner.jpg"
-          alt="home-image"
-        />
+      <Swiper className='swiper__container'
+        spaceBetween={30}
+        draggable={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={false}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+      >
+        <SwiperSlide className='home__image'>
+        <img src="/images/banner.jpg" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className='home__image'><img src="/images/banner1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide className='home__image'><img src="/images/banner2.jpg" alt="" /></SwiperSlide>
+      </Swiper>
+       
+        
         <div className="home__search">
         </div>
         <div className="home__row">
