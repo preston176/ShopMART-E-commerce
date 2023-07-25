@@ -6,8 +6,7 @@ import { useStateValue } from "./StateProvider";
 import {auth} from './firebase'
 
 
-const Header = () => {
- 
+const Header = ({ searchQuery, setSearchQuery }) => {
   const handleAuthentication = () => {
     if (user)
     {
@@ -29,7 +28,7 @@ const Header = () => {
       
   
       <div className="header__search">
-        <input className="header__searchInput" type="text" />
+        <input className="header__searchInput" type="text" onChange={(e) => setSearchQuery(e.target.value)} value={searchQuery} />
         <SearchIcon className="header__searchIcon"
         />
       </div>
