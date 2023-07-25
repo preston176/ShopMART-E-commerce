@@ -9,6 +9,8 @@ import { FormattedNumber } from 'react-intl';
 import { getBasketTotal } from './reducer';
 import instance from './axios';
 import axios from './axios';
+import { db } from './firebase';
+import { doc, collection, setDoc } from "firebase/firestore";
 
 const Payment = () => {
     const navigate = useNavigate();
@@ -20,7 +22,7 @@ const Payment = () => {
     const [processing, setProcessing] = useState("")
     const [error, setError] = useState(null)
     const [disabled, setDisabled] = useState(true);
-    const [clientSecret, setClientSecret] = useState(true)
+    const [clientSecret, setClientSecret] = useState("")
 
     useEffect(() => {
             //generate stripe secret used to charge a customer but whenever basket changes we need a new secret
@@ -40,7 +42,7 @@ const Payment = () => {
         const elements = useElements();
 
         console.log("the secret is", clientSecret);
-        
+        console.log("😒😒",user.uid)
         const handleSubmit = async (event) => {
             // stripe function
             event.preventDefault();
@@ -51,6 +53,21 @@ const Payment = () => {
                 }
             }).then(({paymentIntent}) => {
                 //paymentIntent === payment confirmation
+                const saveOrderToDatabase = async (userId, paymentIntent, basket) => {
+                    try {
+                      const orderRef = doc(collection(db, "users", userId, "orders"), paymentIntent.id);
+                      await setDoc(orderRef, {
+                        basket: basket,
+                        amount: paymentIntent.amount,
+                        created: paymentIntent.created,
+                      });
+                      console.log("Order saved successfully!");
+                    } catch (error) {
+                      console.error("Error saving order to database:", error);
+                    }
+                  };
+         saveOrderToDatabase(user.uid, paymentIntent, basket); // call the function to populate firebase 
+
                 setSuceeded(true);
                 setError(null);
                 setProcessing(false);
