@@ -54,6 +54,9 @@ const Payment = () => {
                 setSuceeded(true);
                 setError(null);
                 setProcessing(false);
+                dispatch({
+                    type: 'EMPTY_BASKET'
+                })
                 navigate('/orders');
             })
         }
@@ -116,7 +119,7 @@ const Payment = () => {
             style="currency"
             currency="USD"
           />
-          <button disabled={processing || disabled || suceeded}>
+          <button disabled={processing  || suceeded}>
             <span>{processing ? <p>Processing</p> : 
             "Buy Now"
             }</span>

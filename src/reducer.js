@@ -15,6 +15,11 @@ switch(action.type) {
             ...state,
             basket: [...state.basket, action.item]
         };
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: [] //initialize to empty array
+            }
     case 'REMOVE_FROM_BASKET':
         const index = state.basket.findIndex(
             (basketItem) => basketItem.id === action.id);
