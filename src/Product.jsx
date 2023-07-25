@@ -1,14 +1,22 @@
 import { Button } from '@mui/material';
 import './product.css'
 import {useStateValue } from "./StateProvider"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ToastNotification from './ToastNotification';
 
 const Product = ({ title, image, price, rating, id }) => {
 const [{basket}, dispatch] = useStateValue();
+
+
 
 // check basket if working
 // console.log(basket)
 
 const addToBasket = () => {
+  // toast added
+  const toastInfo = () => toast.info('Added to Card successfully');
+
         // dispatch some action into the data i.e item to data layer
     dispatch({
       type: 'ADD_TO_BASKET',
@@ -20,10 +28,13 @@ const addToBasket = () => {
         rating: rating
       },
     });
+    toastInfo(); // Trigger the toast message
+
 };
 
   return (
-    <div className='product'>
+   
+    <div className='product'> 
       <div className='product__info'>
         <p>{title}</p>
         <p className='product__price'>

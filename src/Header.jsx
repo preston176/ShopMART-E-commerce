@@ -49,10 +49,12 @@ const Header = ({ searchQuery, setSearchQuery }) => {
           <span className="header__optionLine2">& Orders</span>
         </div>
         </Link>
+        <Link to="/about">
         <div className="header__option">
-          <span className="header__optionLine1">Your</span>
-          <span className="header__optionLine2">Pro Subscription</span>
+          <span className="header__optionLine1">About</span>
+          <span className="header__optionLine2">Us</span>
         </div>
+        </Link>
         <Link to='/checkout'>
         <div className="header__optionBasket">
             <AddShoppingCartIcon />

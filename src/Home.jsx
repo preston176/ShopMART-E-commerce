@@ -7,6 +7,7 @@ import Product from './Product'
 import './home.css'
 import { products } from './producsData';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { ToastContainer } from 'react-toastify';
 
 
 const Home = ({ searchQuery }) => {
@@ -42,6 +43,17 @@ const Home = ({ searchQuery }) => {
         
         <div className="home__search">
         </div>
+        <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        // pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
         <div className="home__row">
           {filteredProducts.map((product) => (
          
