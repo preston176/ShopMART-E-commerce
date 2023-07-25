@@ -79,7 +79,7 @@ const Payment = () => {
         }
         const handleChange = e => {
             // handle the changes
-            setDisabled(empty);
+            setDisabled(false);
             setError(event.error ? event.error.message : "");
         }
 
@@ -136,7 +136,7 @@ const Payment = () => {
             style="currency"
             currency="USD"
           />
-          <button disabled={processing  || suceeded}>
+          <button disabled={processing || disabled || suceeded}>
             <span>{processing ? <p>Processing</p> : 
             "Buy Now"
             }</span>

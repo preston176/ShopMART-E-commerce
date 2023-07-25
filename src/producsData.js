@@ -20,7 +20,7 @@ export const products = [
         title: "Hisense A4 Series 40-Inch",
         price: 156.99,
         image:
-          "https://m.media-amazon.com/images/I/51eOztNdCkL._AC_UY327_FMwebp_QL65_.jpg",
+          "https://m.media-amazon.com/images/I/71lQXS-yl2L.__AC_SX300_SY300_QL70_FMwebp_.jpg",
         rating: 4,
       },
       {
