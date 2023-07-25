@@ -8,12 +8,12 @@ import { useEffect, useState } from 'react';
 import { FormattedNumber } from 'react-intl';
 import { getBasketTotal } from './reducer';
 import instance from './axios';
-import { useHistory } from 'react-router-dom';
 import axios from './axios';
 
 const Payment = () => {
+    const navigate = useNavigate();
     const[{ basket, user }, dispatch] = useStateValue();
-    const history = useHistory();
+
     
 
     const [suceeded, setSuceeded] = useState(false)
@@ -39,6 +39,8 @@ const Payment = () => {
         const stripe = useStripe();
         const elements = useElements();
 
+        console.log("the secret is", clientSecret);
+        
         const handleSubmit = async (event) => {
             // stripe function
             event.preventDefault();
@@ -52,7 +54,7 @@ const Payment = () => {
                 setSuceeded(true);
                 setError(null);
                 setProcessing(false);
-                history.replace('/orders')
+                navigate('/orders');
             })
         }
         const handleChange = e => {
