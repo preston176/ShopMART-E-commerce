@@ -4,6 +4,7 @@
 A Fullstack E-commerce website built using REACT js
 
 ## Demo
+[Live Preview](https://markethub-f6f5e.web.app/)
 
 ![Alt text](smartmockups_lki9vgk4.jpg)
 ![Alt text](smartmockups_lki9szlg.jpg)
