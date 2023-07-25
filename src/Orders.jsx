@@ -38,7 +38,7 @@ const Orders = () => {
         <div className='orders'>
             <h1>Your Orders</h1>
             {orders.length > 0 ? (
-                orders.map((order) => <Order key={order.id} order={order} />)
+                orders.map((order) => <Order key={crypto.randomUUID()} order={order} />)
             ) : (
                 <p>No orders found.</p>
             )}

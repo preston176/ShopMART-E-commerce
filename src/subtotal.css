@@ -30,3 +30,11 @@
   outline: none;
   color: #fff;
 }
+
+.subtotal > button:hover {
+  cursor: pointer;
+  background: black;
+  font-weight: 550;
+  transform: scale(1.02);
+  transition: all 0.05s ease-in-out;
+}

@@ -32,7 +32,7 @@ const CheckoutProduct = ({id, image, title, price, rating, hideButton }) => {
         </div>
         {/* only render button if it is not hidden */}
         {!hideButton && (
-          <button onClick={removeFromBasket}>Remove from Cart</button>
+          <button onClick={removeFromBasket} className='remove__btn'>Remove from Cart</button>
         )}
        
     </div>

@@ -81,30 +81,30 @@ export const products = [
       },
       {
         id: "11",
-        title: "SAMSUNG 980 PRO SSD 2TB",
-        price: 119.99,
+        title: "Apple 2023 MacBook Pro Laptop M2",
+        price: 3034.94,
         image:
-          "https://m.media-amazon.com/images/I/71KeDAkw+0L._AC_SX300_SY300_.jpg",
+          "https://m.media-amazon.com/images/I/61CHqS31PiL._AC_SX522_.jpg",
         rating: 4,
       },
       {
         id: "12",
-        title: "SAMSUNG 980 PRO SSD 2TB",
+        title: "Apple 2020 MacBook Air Laptop M1",
         price: 119.99,
         image:
-          "https://m.media-amazon.com/images/I/71KeDAkw+0L._AC_SX300_SY300_.jpg",
+          "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SX522_.jpg",
         rating: 4,
       },
       {
-        id: "8",
-        title: "SAMSUNG 980 PRO SSD 2TB",
+        id: "13",
+        title: "SAMSUNG 32-inch Class LED Smart FHD TV ",
         price: 119.99,
         image:
-          "https://m.media-amazon.com/images/I/71KeDAkw+0L._AC_SX300_SY300_.jpg",
+          "https://m.media-amazon.com/images/I/91UsHjAPTlL._AC_UY327_FMwebp_QL65_.jpg",
         rating: 4,
       },
       {
-        id: "8",
+        id: "14",
         title: "SAMSUNG 980 PRO SSD 2TB",
         price: 119.99,
         image:

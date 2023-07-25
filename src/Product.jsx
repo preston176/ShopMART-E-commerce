@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import './product.css'
 import {useStateValue } from "./StateProvider"
 
@@ -41,7 +42,7 @@ const addToBasket = () => {
       </div>
 
         <img src={image} alt='product-image' />
-        <button onClick={addToBasket}>Add to Cart</button>
+        <Button  onClick={addToBasket} variant='text'>Add to Cart</Button>
     </div>
   )
 }

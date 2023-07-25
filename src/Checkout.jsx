@@ -14,7 +14,7 @@ const Checkout = () => {
         <h2 className="checkout__title">
             Your shopping Basket
         </h2>
-
+   
         {basket.map(item => (
           <CheckoutProduct 
           key={crypto.randomUUID()}

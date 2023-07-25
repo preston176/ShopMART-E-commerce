@@ -11,6 +11,12 @@
   max-height: 400px;
   min-width: 100px;
 }
+.product:hover {
+  transform: scale(1.01);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
 .product__rating {
   display: flex;
 }
@@ -35,6 +41,13 @@
   color: #fff;
   border: 1px solid black;
   margin-top: 10px;
+  outline: none;
+}
+.product > button:hover {
+  transform: scale(1.1);
+  background: black;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
 }
 
 .product__info {

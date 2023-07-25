@@ -30,3 +30,14 @@
   font-size: 17px;
   font-weight: 800;
 }
+
+.remove__btn {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.remove__btn:hover {
+  background: #111;
+  color: #fff;
+  transition: all 0.15s ease-in-out;
+}
